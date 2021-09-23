@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 
-function App() {
+const App = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <h1>Hi</h1>
     </div>
   );
