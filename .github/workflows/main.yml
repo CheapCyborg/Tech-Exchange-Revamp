@@ -1,6 +1,9 @@
 name: Run Linter
 
 on: pull_request
+ paths:
+      - '/server'
+      - '/client'
 
 jobs:
   build:
