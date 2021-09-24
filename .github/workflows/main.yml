@@ -1,10 +1,6 @@
 name: Run Linter
 
-on:
-  pull_request:
-    paths:
-      - 'server/**'
-      - 'client/**'
+on: pull_request
 
 jobs:
   build:
@@ -12,8 +8,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2.3.4
     - name: Install modules
+      working-directory: ./client
+      working-directory: ./server
       run: npm ci
     - name: Install eslint
+      working-directory: ./client
+      working-directory: ./server
       run: yarn add eslint
     - name: Run ESLint
+      working-directory: ./client
+      working-directory: ./server
       run: npx eslint ./client/**/*.{js,ts,tsx} ./server/**/*.{js,ts} --no-error-on-unmatched-pattern
