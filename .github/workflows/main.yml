@@ -1,0 +1,21 @@
+name: Run Linter
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: { dir: ['./client', './server'] }
+
+    steps:
+    - uses: actions/checkout@v2.3.4
+    - name: Install modules
+      working-directory: ${{ matrix.dir }}
+      run: rm -rf node_modules && yarn install --frozen-lockfile
+    - name: Install ESLint
+      working-directory: ${{ matrix.dir }}
+      run: yarn add eslint
+    - name: Run ESLint
+      working-directory: ${{ matrix.dir }}
+      run: npx eslint ./client/**/*.{js,ts,tsx} ./server/**/*.{js,ts} --no-error-on-unmatched-pattern

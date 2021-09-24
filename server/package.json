@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon index.ts",
     "dev": "nodemon --config nodemon.json index.ts",
-    "dev:debug": "nodemon --config nodemon.json --inspect-brk index.ts"
+    "dev:debug": "nodemon --config nodemon.json --inspect-brk index.ts",
+    "lint": "eslint \"**/*.{js,ts}\" --quiet --fix"
   },
   "keywords": [],
   "author": "Seth Vance & Damian Green <sethvance39@gmail.com>",

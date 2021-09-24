@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 import express from 'express';
 
 import { getConsoles } from '../controllers/ConsolesController';
