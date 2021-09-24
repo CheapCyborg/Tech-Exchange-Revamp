@@ -5,11 +5,17 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import consoleRoutes from './routes/Consoles';
+import gameRoutes from './routes/Games';
+import accessoriesRoutes from './routes/Accessories';
+import homeRoutes from './routes/Home';
 
 const app = express();
 dotenv.config();
 
+app.use('/', homeRoutes);
 app.use('/consoles', consoleRoutes);
+app.use('/games', gameRoutes);
+app.use('/accessories', accessoriesRoutes);
 
 app.use(express.urlencoded({ limit: '30mb', extended: true }));
 app.use(express.json()); // To parse the incoming requests with JSON payloads
