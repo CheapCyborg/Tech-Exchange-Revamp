@@ -1,0 +1,15 @@
+name: Run Linter
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.3.4
+    - name: Install modules
+      run: npm ci
+    - name: Install eslint
+      run: yarn add eslint
+    - name: Run ESLint
+      run: npx eslint ./client/**/*.{js,ts,tsx} ./server/**/*.{js,ts} --no-error-on-unmatched-pattern
