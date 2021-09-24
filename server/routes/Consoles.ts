@@ -1,7 +1,7 @@
 "use strict"
 import express from 'express';
 
-import { getConsoles } from '../controllers/consoles.js';
+import { getConsoles } from '../controllers/ConsolesController';
 
 const router = express.Router();
 
