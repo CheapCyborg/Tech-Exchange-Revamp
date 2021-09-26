@@ -24,7 +24,8 @@
         "test": "craco test",
         "eject": "craco eject",
         "lint": "eslint \"**/*.{js,ts,tsx}\" --quiet --fix",
-        "prepare": "cd ../ && husky install"
+        "prepare": "cd ../ && husky install",
+        "create-hook": "husky add .husky/pre-commit \"npm test\""
     },
     "eslintConfig": {
         "extends": [
@@ -63,7 +64,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "lint-staged --verbose"
         }
     },
     "lint-staged": {
