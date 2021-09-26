@@ -2,5 +2,5 @@
 import { Request, Response } from 'express';
 
 export const getAccessories = (req: Request, res: Response): void => {
-    res.send('This is where Accessories like controllers will go');
+    res.send('This is where Accessories like controllers go');
 };
