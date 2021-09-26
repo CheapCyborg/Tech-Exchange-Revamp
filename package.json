@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "prepare": "husky install",
-    "create-hook": "husky add .husky/pre-commit \"npm test\""
-  },
-  "devDependencies": {
-    "husky": "^7.0.2"
-  }
-}
