@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 
-const App = () => {
+const App = (): JSX.Element => {
     return (
         <div>
             <Navbar />
