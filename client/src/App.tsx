@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 const App = (): JSX.Element => {
     return (
         <div>
             <Navbar />
-            <h1>Hi</h1>
+            <Footer />
         </div>
     );
 };
