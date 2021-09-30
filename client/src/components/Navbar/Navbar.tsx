@@ -5,9 +5,9 @@ const Navbar = (): JSX.Element => {
     return (
         <nav className="flex items-center justify-between flex-wrap bg-blue-300 p-6">
             <div className="flex items-center flex-shrink-0 text-black mr-6">
-                <img className="logoStyle" src={logo}></img>
+                <img className="w-7/12" src={logo}></img>
             </div>
-            <div className="navMenu">
+            <div className="flex flex-col">
                 <Menu>
                     <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                         <div className="text-lg lg:flex-grow">
