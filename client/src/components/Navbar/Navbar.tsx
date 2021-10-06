@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu } from '@headlessui/react';
 import logo from '../../images/logo.png';
+
 const Navbar = (): JSX.Element => {
     return (
         <nav className="flex items-center justify-between flex-wrap bg-blue-300 p-6">
